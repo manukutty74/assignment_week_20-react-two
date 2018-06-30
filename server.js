@@ -9,6 +9,7 @@ const app = express();
 // configure body parser
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 // set up logger
 app.use(logger('combined'))
 // serve up static assets
@@ -18,6 +19,7 @@ app.use(routes);
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
+
 // Connect to the Mongo DB
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/NYTREACT",
@@ -27,7 +29,7 @@ mongoose.connect(
 );
 
 // Start the API server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 app.listen(PORT, function() {
   console.log(`API Server now listening on PORT ${PORT}...`);
 });
