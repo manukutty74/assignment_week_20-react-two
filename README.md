@@ -1,6 +1,6 @@
 # React NYT Article Searcher
 
-### [Click here](http://nyt-react-map.herokuapp.com/) to see the deployed version
+### [Click here](to be done /) to see the deployed version
 
 ### Technologies used:
 * React
